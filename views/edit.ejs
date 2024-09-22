@@ -1,0 +1,27 @@
+<%-layout("./layouts/boilerplate") %>
+
+<div class="container">
+    <h3 class="mt-4 offset-2" >Edit Blog </h3>
+    
+
+    <div class="cols-8 offset-2">
+    <form method="post" action="/blogs/<%=blog._id%>?_method=patch">
+       
+       <div class="mb-3">
+        <label for="title" class="form-label"><b>Title</b></Title></label>
+        <input type="text" name="blog[title]" class="form-control" value="<%=blog.title%>">
+    </div>
+
+    <div class="mb-3">
+        <label for="title" class="form-label"><b>Author</b></Title></label>
+        <input type="text" name="blog[author]" class="form-control" value="<%=blog.author%>">
+    </div>    
+<div class="mb-3">
+    <label for="content" class="form-label">Content</label>
+    <textarea name="blog[content]" type="text" class="form-control" rows="5" ><%=blog.content%></textarea>
+  </div>
+         <button class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</div> 
+

@@ -1,0 +1,30 @@
+<%- layout("./layouts/boilerplate") %> 
+<div class="row mt-4">
+<div class="col-8 offset-2">
+    <h2 class="mb-3">Create a new Page</h2>
+
+    <form method="post" action="/blogs" novalidate class="needs-validation" >
+        
+        <div class="mb-4" >
+            <label class="form-lebel">Title</label>
+            <input placeholder="enter title" name="blog[title]" class="form-control">
+          </div>
+          <div class="mb-4" >
+            <label class="form-lebel">Content</label>
+        <textarea name="blog[content]" type="text" class="form-control"></textarea>   
+        </div>
+          
+
+          <div class="mb-4" >
+            <label class="form-lebel">Author Name</label>
+            <input placeholder="enter name" type="text" name="blog[author]" class="form-control">
+          </div>
+          
+          <div class="mb-4" >
+            <label class="form-lebel">Phone NO.</label>
+            <input placeholder="enter your phone number" type="number" name="blog[phone_number]" class="form-control">
+          </div>
+          <button class="btn mb-3 add-btn">Add</button>
+        </form>
+</div>
+</div>
